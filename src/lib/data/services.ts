@@ -6,7 +6,7 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    title: "Whole Home Renovations",
+    title: "Home Remodeling",
     description: "Complete transformations tailored to your lifestyle.",
     icon: "home",
   },
