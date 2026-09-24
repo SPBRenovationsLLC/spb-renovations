@@ -1,9 +1,10 @@
 const trustItems = [
-  {
-    icon: <ShieldIcon />,
-    title: "Licensed & Insured",
-    description: "Your project is in safe hands.",
-  },
+  // Patricia might be having legal issues so comment this out
+  // {
+  //   icon: <ShieldIcon />,
+  //   title: "Licensed & Insured",
+  //   description: "Your project is in safe hands.",
+  // },
   {
     icon: <BuildingIcon />,
     title: "Residential & Commercial",

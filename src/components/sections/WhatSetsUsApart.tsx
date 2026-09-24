@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bullets = [
-  "Licensed and insured professionals with years of proven renovation experience.",
+  // commented out due to potential legal issues
+  // "Licensed and insured professionals with years of proven renovation experience.",
   "Custom-built solutions designed around your home, your style, and your needs.",
   "Clear timelines and consistent communication from start to finish.",
   "Clean, organized job sites with respect for your home throughout the process.",
