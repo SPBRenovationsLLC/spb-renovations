@@ -20,9 +20,11 @@ export const services: Service[] = [
     description: "Spa-like bathrooms with quality and style.",
     icon: "bathroom",
   },
-  {
-    title: "Design & Build",
-    description: "Seamless planning and expert project management.",
-    icon: "design",
-  },
+  // Patricia asks me to remove this because they are not licensed.
+  // As I am not sure what exactly she means, commenting out for now.
+  // {
+  //   title: "Design & Build",
+  //   description: "Seamless planning and expert project management.",
+  //   icon: "design",
+  // },
 ];
