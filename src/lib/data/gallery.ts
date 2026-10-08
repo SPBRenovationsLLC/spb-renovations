@@ -15,4 +15,9 @@ export const videos: GalleryVideo[] = [
     title: "Lutz Home Renovation 2",
     playbackId: "cgQ16stpqzEqWFlg474ZaTN2x15NVUkBZicZ6rQrqRQ",
   },
+  {
+    id: "3",
+    title: "Lutz Home Renovation 3",
+    playbackId: "hH02rD27GUuGN8FCuCI00y3fbS9hxenqNIiLx4Q9MBfSs",
+  },
 ];
