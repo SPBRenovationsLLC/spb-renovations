@@ -62,7 +62,7 @@ function GalleryGrid() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12 max-w-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {videos.map((video) => (
             <VideoCard key={video.id} video={video} />
           ))}
