@@ -32,7 +32,9 @@ export default function MeetTheOwners() {
                 className="w-full object-cover"
               />
               <div className="bg-zinc-900 px-6 py-4">
-                <p className="text-white font-semibold text-lg">Scott & Patricia Baldwin</p>
+                <p className="text-white font-semibold text-lg">
+                  Scott & Patricia Baldwin
+                </p>
                 <p className="text-gold text-sm tracking-wide uppercase mt-0.5">
                   Founders, SPB Renovations
                 </p>
@@ -43,19 +45,36 @@ export default function MeetTheOwners() {
           <div className="lg:col-span-8">
             <blockquote className="border-l-4 border-gold bg-zinc-50 px-6 py-5 rounded mb-8">
               <p className="text-zinc-600 text-lg italic leading-relaxed">
-                &ldquo;We started SPB Renovations because we believed clients deserved better — better communication, better craftsmanship, and a team that actually cares about the outcome. That goes for every project, whether it&apos;s a home or a business.&rdquo;
+                &ldquo;We started SPB Renovations because we believed clients
+                deserved better — better communication, better craftsmanship,
+                and a team that actually cares about the outcome. That goes for
+                every project, whether it&apos;s a home or a business.&rdquo;
               </p>
             </blockquote>
 
             <div className="space-y-4 mb-8">
               <p className="text-zinc-500 leading-relaxed">
-                Scott and Patricia Baldwin are the founders of SPB Renovations and the heart behind everything the company stands for. Originally from Ontario, Canada, the couple brought with them a strong work ethic, a deep respect for quality craftsmanship, and a shared belief that a renovation should be a positive experience — not a stressful one.
+                Scott and Patricia Baldwin are the founders of SPB Renovations
+                and the heart behind everything the company stands for.
+                Originally from Ontario, Canada, the couple brought with them a
+                strong work ethic, a deep respect for quality craftsmanship, and
+                a shared belief that a renovation should be a positive
+                experience — not a stressful one.
               </p>
               <p className="text-zinc-500 leading-relaxed">
-                With over a decade of experience in the remodeling industry, Scott and Patricia have overseen projects of all sizes — from targeted kitchen and bathroom remodels to complete whole-home transformations and commercial build-outs. Their complementary strengths mean every project benefits from both skilled execution and thoughtful design guidance.
+                With over a decade of experience in the remodeling industry,
+                Scott and Patricia have overseen projects of all sizes — from
+                targeted kitchen and bathroom remodels to complete whole-home
+                transformations and commercial build-outs. Their complementary
+                strengths mean every project benefits from both skilled
+                execution and thoughtful design guidance.
               </p>
               <p className="text-zinc-500 leading-relaxed">
-                They founded SPB Renovations with a simple mission: to deliver renovations they would be proud to put their name on — for homeowners and business owners alike. That means showing up, following through, and never cutting corners — on quality, communication, or care.
+                They founded SPB Renovations with a simple mission: to deliver
+                renovations they would be proud to put their name on — for
+                homeowners and business owners alike. That means showing up,
+                following through, and never cutting corners — on quality,
+                communication, or care.
               </p>
             </div>
 
@@ -63,7 +82,9 @@ export default function MeetTheOwners() {
               {bullets.map((bullet) => (
                 <li key={bullet} className="flex items-start gap-3">
                   <CheckIcon />
-                  <span className="text-zinc-600 leading-relaxed">{bullet}</span>
+                  <span className="text-zinc-600 leading-relaxed">
+                    {bullet}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -83,7 +104,13 @@ export default function MeetTheOwners() {
 
 function CheckIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="shrink-0 mt-0.5">
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="shrink-0 mt-0.5"
+    >
       <circle cx="12" cy="12" r="10" fill="#C9A227" />
       <polyline
         points="7,12 10.5,15.5 17,9"
