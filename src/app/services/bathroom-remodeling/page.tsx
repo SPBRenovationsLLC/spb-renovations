@@ -25,7 +25,7 @@ export default function BathroomRemodelingPage() {
           "Walk-in shower design and tile installation",
           "Freestanding and built-in bathtub installation",
           "Custom vanity and cabinetry",
-          "Floor and wall tile selection and installation",
+          // "Floor and wall tile selection and installation",
           "Fixture and hardware upgrades",
           "Lighting and ventilation improvements",
           "Plumbing coordination and waterproofing",

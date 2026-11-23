@@ -5,13 +5,21 @@ export default function AboutIntro() {
         <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 leading-tight mb-8">
           Serving Tampa Bay Residents & Businesses With Quality and Integrity
         </h2>
-        <p className="text-zinc-500 text-lg leading-relaxed mb-6">
-          SPB Renovations is a full-service renovation company based in Tampa Bay
-          specializing in kitchen remodels, bathroom renovations, flooring,
+        {/* <p className="text-zinc-500 text-lg leading-relaxed mb-6">
+          SPB Renovations is a full-service renovation company based in Tampa
+          Bay specializing in kitchen remodels, bathroom renovations, flooring,
           custom cabinetry, and more — for both residential and commercial
-          clients. Whether you're a homeowner refreshing your space or a business
-          upgrading your facility, we bring the same standard of craftsmanship
-          and care to every project.
+          clients. Whether you're a homeowner refreshing your space or a
+          business upgrading your facility, we bring the same standard of
+          craftsmanship and care to every project.
+        </p> */}
+        <p className="text-zinc-500 text-lg leading-relaxed mb-6">
+          SPB Renovations is a full-service renovation company based in Tampa
+          Bay specializing in kitchen remodels, bathroom renovations, countertops,
+          custom cabinetry, and more — for both residential and commercial
+          clients. Whether you're a homeowner refreshing your space or a
+          business upgrading your facility, we bring the same standard of
+          craftsmanship and care to every project.
         </p>
         <p className="text-zinc-500 text-lg leading-relaxed">
           Every project is guided by a structured process that prioritizes
