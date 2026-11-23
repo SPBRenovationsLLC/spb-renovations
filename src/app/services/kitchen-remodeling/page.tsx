@@ -25,7 +25,7 @@ export default function KitchenRemodelingPage() {
           "Custom cabinetry design and installation",
           "Countertop selection and installation — quartz, granite, marble, and more",
           "Kitchen island design and build",
-          "Tile backsplash and flooring installation",
+          // "Tile backsplash and flooring installation",
           "Lighting layout and fixture installation",
           "Appliance integration and plumbing coordination",
           "Full project management from design to completion",

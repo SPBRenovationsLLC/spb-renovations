@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { PHONE_NUMBER, PHONE_HREF, EMAIL, EMAIL_HREF, HOURS } from "@/lib/data/contact";
+import {
+  PHONE_NUMBER,
+  PHONE_HREF,
+  EMAIL,
+  EMAIL_HREF,
+  HOURS,
+} from "@/lib/data/contact";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -9,10 +15,19 @@ export default function ContactForm() {
   const [error, setError] = useState("");
 
   const [fields, setFields] = useState({
-    firstName: "", lastName: "", email: "", phone: "", projectType: "", message: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    projectType: "",
+    message: "",
   });
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
+  function handleChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) {
     setFields({ ...fields, [e.target.name]: e.target.value });
   }
 
@@ -39,147 +54,189 @@ export default function ContactForm() {
     <section className="bg-white md:bg-transparent pb-12 md:pb-20">
       <div className="w-full px-6 md:px-12 lg:px-20">
         <div className="md:bg-white md:rounded-xl md:shadow-2xl md:p-12 md:-mt-24 md:relative md:z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+            {/* Left — info */}
+            <div className="pt-8 md:pt-0">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-px bg-gold" />
+                <span className="text-gold text-sm font-semibold tracking-widest uppercase">
+                  Get in Touch
+                </span>
+              </div>
+              <h2 className="text-4xl font-bold text-zinc-900 leading-tight mb-5">
+                Let&apos;s Start Your Project
+              </h2>
+              <p className="text-zinc-500 text-lg leading-relaxed mb-10">
+                Whether it&apos;s a residential renovation or a commercial
+                project, fill out the form and we&apos;ll be in touch within one
+                business day to schedule your free consultation.
+              </p>
 
-          {/* Left — info */}
-          <div className="pt-8 md:pt-0">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-px bg-gold" />
-              <span className="text-gold text-sm font-semibold tracking-widest uppercase">
-                Get in Touch
-              </span>
-            </div>
-            <h2 className="text-4xl font-bold text-zinc-900 leading-tight mb-5">
-              Let&apos;s Start Your Project
-            </h2>
-            <p className="text-zinc-500 text-lg leading-relaxed mb-10">
-              Whether it&apos;s a residential renovation or a commercial project,
-              fill out the form and we&apos;ll be in touch within one business day
-              to schedule your free consultation.
-            </p>
-
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-gold/10 p-3 rounded">
-                  <PhoneIcon />
-                </div>
-                <div>
-                  <p className="font-semibold text-zinc-900">Phone</p>
-                  <a href={PHONE_HREF} className="text-zinc-500 hover:text-gold transition-colors">
-                    {PHONE_NUMBER}
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="bg-gold/10 p-3 rounded">
-                  <MailIcon />
-                </div>
-                <div>
-                  <p className="font-semibold text-zinc-900">Email</p>
-                  <a href={EMAIL_HREF} className="text-zinc-500 hover:text-gold transition-colors">
-                    {EMAIL}
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="bg-gold/10 p-3 rounded">
-                  <ClockIcon />
-                </div>
-                <div>
-                  <p className="font-semibold text-zinc-900">Office Hours</p>
-                  <p className="text-zinc-500">{HOURS}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right — form */}
-          <div className="py-8 md:py-0 md:bg-zinc-50 md:rounded-lg md:p-10">
-            {submitted ? (
-              <div className="flex flex-col items-center justify-center py-16 text-center">
-                <div className="bg-gold/10 p-4 rounded-full mb-5">
-                  <CheckIcon />
-                </div>
-                <h3 className="text-2xl font-bold text-zinc-900 mb-3">Message Sent!</h3>
-                <p className="text-zinc-500 leading-relaxed">
-                  Thank you for reaching out. We&apos;ll be in touch within one business day to schedule your free consultation.
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gold/10 p-3 rounded">
+                    <PhoneIcon />
+                  </div>
                   <div>
-                    <label className="block text-sm font-medium text-zinc-700 mb-1.5">First Name</label>
-                    <input type="text" name="firstName" required placeholder="Scott"
-                      value={fields.firstName} onChange={handleChange}
+                    <p className="font-semibold text-zinc-900">Phone</p>
+                    <a
+                      href={PHONE_HREF}
+                      className="text-zinc-500 hover:text-gold transition-colors"
+                    >
+                      {PHONE_NUMBER}
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-gold/10 p-3 rounded">
+                    <MailIcon />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-zinc-900">Email</p>
+                    <a
+                      href={EMAIL_HREF}
+                      className="text-zinc-500 hover:text-gold transition-colors"
+                    >
+                      {EMAIL}
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-gold/10 p-3 rounded">
+                    <ClockIcon />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-zinc-900">Office Hours</p>
+                    <p className="text-zinc-500">{HOURS}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right — form */}
+            <div className="py-8 md:py-0 md:bg-zinc-50 md:rounded-lg md:p-10">
+              {submitted ? (
+                <div className="flex flex-col items-center justify-center py-16 text-center">
+                  <div className="bg-gold/10 p-4 rounded-full mb-5">
+                    <CheckIcon />
+                  </div>
+                  <h3 className="text-2xl font-bold text-zinc-900 mb-3">
+                    Message Sent!
+                  </h3>
+                  <p className="text-zinc-500 leading-relaxed">
+                    Thank you for reaching out. We&apos;ll be in touch within
+                    one business day to schedule your free consultation.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-700 mb-1.5">
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        name="firstName"
+                        required
+                        placeholder="Scott"
+                        value={fields.firstName}
+                        onChange={handleChange}
+                        className="w-full border border-zinc-200 rounded px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-gold transition-colors"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-700 mb-1.5">
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        name="lastName"
+                        required
+                        placeholder="Baldwin"
+                        value={fields.lastName}
+                        onChange={handleChange}
+                        className="w-full border border-zinc-200 rounded px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-gold transition-colors"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-700 mb-1.5">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="you@example.com"
+                      value={fields.email}
+                      onChange={handleChange}
                       className="w-full border border-zinc-200 rounded px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-gold transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-zinc-700 mb-1.5">Last Name</label>
-                    <input type="text" name="lastName" required placeholder="Baldwin"
-                      value={fields.lastName} onChange={handleChange}
+                    <label className="block text-sm font-medium text-zinc-700 mb-1.5">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="(813) 000-0000"
+                      value={fields.phone}
+                      onChange={handleChange}
                       className="w-full border border-zinc-200 rounded px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-gold transition-colors"
                     />
                   </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-zinc-700 mb-1.5">Email</label>
-                  <input type="email" name="email" required placeholder="you@example.com"
-                    value={fields.email} onChange={handleChange}
-                    className="w-full border border-zinc-200 rounded px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-gold transition-colors"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-zinc-700 mb-1.5">Phone Number</label>
-                  <input type="tel" name="phone" placeholder="(813) 000-0000"
-                    value={fields.phone} onChange={handleChange}
-                    className="w-full border border-zinc-200 rounded px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-gold transition-colors"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-zinc-700 mb-1.5">Type of Project</label>
-                  <select name="projectType" value={fields.projectType} onChange={handleChange}
-                    className="w-full border border-zinc-200 rounded px-4 py-3 text-zinc-900 focus:outline-none focus:border-gold transition-colors bg-white"
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-700 mb-1.5">
+                      Type of Project
+                    </label>
+                    <select
+                      name="projectType"
+                      value={fields.projectType}
+                      onChange={handleChange}
+                      className="w-full border border-zinc-200 rounded px-4 py-3 text-zinc-900 focus:outline-none focus:border-gold transition-colors bg-white"
+                    >
+                      <option value="">Select a service...</option>
+                      <option>Kitchen Remodeling</option>
+                      <option>Bathroom Remodeling</option>
+                      {/* <option>Flooring Installation</option> */}
+                      <option>Countertops</option>
+                      <option>Custom Cabinetry / Professional Carpentry</option>
+                      <option>Demolition</option>
+                      <option>Drywall</option>
+                      <option>Painting</option>
+                      <option>Glass Doors, Shower Enclosures & Mirrors</option>
+                      <option>Commercial Renovation</option>
+                      <option>Whole Property Renovation</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-700 mb-1.5">
+                      Tell Us About Your Project
+                    </label>
+                    <textarea
+                      name="message"
+                      rows={4}
+                      placeholder="Describe your project goals, timeline, or any questions you have..."
+                      value={fields.message}
+                      onChange={handleChange}
+                      className="w-full border border-zinc-200 rounded px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-gold transition-colors resize-none"
+                    />
+                  </div>
+                  {error && <p className="text-red-500 text-sm">{error}</p>}
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full bg-gold hover:bg-gold-dark disabled:opacity-60 text-white font-semibold py-4 rounded transition-colors"
                   >
-                    <option value="">Select a service...</option>
-                    <option>Kitchen Remodeling</option>
-                    <option>Bathroom Remodeling</option>
-                    <option>Flooring Installation</option>
-                    <option>Countertops</option>
-                    <option>Custom Cabinetry / Professional Carpentry</option>
-                    <option>Demolition</option>
-                    <option>Drywall</option>
-                    <option>Painting</option>
-                    <option>Glass Doors, Shower Enclosures & Mirrors</option>
-                    <option>Commercial Renovation</option>
-                    <option>Whole Property Renovation</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-zinc-700 mb-1.5">
-                    Tell Us About Your Project
-                  </label>
-                  <textarea
-                    name="message" rows={4}
-                    placeholder="Describe your project goals, timeline, or any questions you have..."
-                    value={fields.message} onChange={handleChange}
-                    className="w-full border border-zinc-200 rounded px-4 py-3 text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-gold transition-colors resize-none"
-                  />
-                </div>
-                {error && <p className="text-red-500 text-sm">{error}</p>}
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full bg-gold hover:bg-gold-dark disabled:opacity-60 text-white font-semibold py-4 rounded transition-colors"
-                >
-                  {loading ? "Sending..." : "Send Message"}
-                </button>
-              </form>
-            )}
+                    {loading ? "Sending..." : "Send Message"}
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
@@ -196,7 +253,14 @@ function PhoneIcon() {
 
 function MailIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" strokeWidth="2">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#C9A227"
+      strokeWidth="2"
+    >
       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
       <polyline points="22,6 12,13 2,6" />
     </svg>
@@ -205,7 +269,14 @@ function MailIcon() {
 
 function ClockIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A227" strokeWidth="2">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#C9A227"
+      strokeWidth="2"
+    >
       <circle cx="12" cy="12" r="10" />
       <polyline points="12,6 12,12 16,14" />
     </svg>
@@ -216,7 +287,13 @@ function CheckIcon() {
   return (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
       <circle cx="12" cy="12" r="10" fill="#C9A227" />
-      <polyline points="7,12 10.5,15.5 17,9" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <polyline
+        points="7,12 10.5,15.5 17,9"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
